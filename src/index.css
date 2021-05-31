@@ -102,11 +102,10 @@ article h2{
 article p{
   line-height: 2em;
   color: #4B4B4B;
-}
-article p::first-line{
   font-weight: bold;
   font-size: 1.2em;
 }
+
 .images{
   text-align: center;
   margin: 80px 0;
