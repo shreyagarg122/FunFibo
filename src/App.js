@@ -75,10 +75,11 @@ function App() {
           <label>Nth term: </label>
           <input 
           type="text"
+          cols="50"
           value={term}
           onChange={(e)=>setTerm(e.target.value)}
-          />
-          <button onClick={fiborun}>Check</button>
+          /><br />
+          <button onClick={fiborun}>Check</button><br/><br/>
         </form>
         <label>Sum:<br /></label>
         <textarea value={sumfi} rows="10" cols="50"></textarea>
