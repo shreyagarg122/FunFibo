@@ -14,20 +14,6 @@ function App() {
     return s;
    }
 
-  function bi_copy_(x,y) {
-    var i, xL = x.length, k = Math.min(xL, y.length);
-    for (i=0; i<k; i++) x[i]=y[i];
-    for (i=k; i<xL;i++) x[i]=0;
-   }
-
-  function bi_trimV(x,k) {
-    var i,y;
-    for (i=x.length; i>0 && !x[i-1]; i--);
-    y=new Array(i+k);
-    bi_copy_(y,x);
-    return y;
-   }
-
   function bi_addU(a1,a2) {
     var L1=a1.length, L2=a2.length, L=Math.max(L1,L2), M=Math.ceil(L/15);
     var i=0, r=[]; r[M]=0;
