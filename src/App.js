@@ -5,7 +5,7 @@ import imo from "./img/1.png";
 
 function App() {
   const [term,setTerm]= useState();
-  const [sumfi,setSumfi]=useState(0);
+  const [sumfi,setSumfi]=useState('');
 
   const bi_LRADIX = 1000000000000000;
 
@@ -35,7 +35,10 @@ function App() {
     e.preventDefault();  
 
     var n = parseInt(term,10);
-    if (isNaN(n) || !isFinite(n) || n<0 || n>50000) return 'Expected 0 \u2264 n \u2264 50000'
+    if (isNaN(n) || !isFinite(n) || n<0 || n>50000)
+    {
+      Fn[n]= 'Expected 0 \u2264 n \u2264 50000'
+    } 
     if (n>2 && Fn[n]==null) {
      for (var k=3; k<=n; k++) {
       if (Fn[k]==null) Fn[k] = bi_addU(Fn[k-1],Fn[k-2]);
